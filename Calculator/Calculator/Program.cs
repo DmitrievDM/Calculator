@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 
 namespace Calculator
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -43,25 +43,25 @@ namespace Calculator
             return arg;
         }
 
-        public static float GetResult(float arg1, float arg2, string oper, float result = 0)    //вычисление операций между двумя переменными
+        public static double GetResult(double arg1, double arg2, char oper, double result = 0)    //вычисление операций между двумя переменными
         {
             switch (oper)
             {
-                case "+":
+                case '+':
                     Console.WriteLine("Складываем " + arg1 + " и " + arg2);
-                    result = arg1 + arg2;
+                    result += arg1 + arg2;
                     break;
-                case "-":
+                case '-':
                     Console.WriteLine("Складываем " + arg1 + " и " + arg2);
-                    result = arg1 - arg2;
+                    result += arg1 - arg2;
                     break;
-                case "*":
+                case '*':
                     Console.WriteLine("Складываем " + arg1 + " и " + arg2);
-                    result = arg1 * arg2;
+                    result += arg1 * arg2;
                     break;
-                case "/":
+                case '/':
                     Console.WriteLine("Складываем " + arg1 + " и " + arg2);
-                    result = arg1 / arg2;
+                    result += arg1 / arg2;
                     break;
                 default:
                     Console.WriteLine("Ну и какая тут операция между " + arg1 + " и " + arg2 + "?");
